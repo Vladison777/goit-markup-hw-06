@@ -479,7 +479,7 @@ img {
 .container-one{
     display: flex;
     align-items: baseline;
-    gap: 70px;
+    justify-content: space-between;
 }
 
 .logo-footer>span:first-child {
@@ -729,10 +729,6 @@ img {
     margin-bottom: 9px;
  }
 
- .footer-form{
-    display: flex;
- }
-
  .form-lab {
     display: inline-block;
     margin-bottom: 20px;
@@ -845,10 +841,10 @@ img {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus{
+.modal-close:hover{
     fill: var(--accent-color);
 }
 
@@ -870,6 +866,10 @@ img {
     margin-bottom: 10px;
 }
 
+.textarea-field{
+    margin-bottom: 20px;
+}
+
 .input-wrap {
     position: relative;
 }
@@ -879,10 +879,10 @@ img {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    
     padding-left: 30px;
     cursor: pointer;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text{
@@ -893,15 +893,15 @@ img {
     padding-top: 12px;
     padding-left: 16px;
     resize: none;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-text:hover,
 .modal-text:focus{
     border-color: var(--accent-color);
 }
 
-.modal-input:focus,
-.modal-input:hover{
+.modal-input:focus{
     border-color:var(--accent-color) ;
 }
 
@@ -909,9 +909,10 @@ img {
 .input-label{
     display: block;
     margin-bottom: 4px;
+    font-size: 12px;
 }
 
-.modal-input:focus:hover + .modal-input-icon{
+.modal-input:focus + .modal-input-icon{
     fill: var(--accent-color);
 }
 
@@ -919,9 +920,10 @@ img {
     position: absolute;
     left: 12px;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     width: 18px;
     height: 18px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input::placeholder,
@@ -940,6 +942,7 @@ img {
 }
 
 .button-modal{
+    margin: 0 auto;
     display: block;
     align-items: center;
     text-align: center;
@@ -956,11 +959,17 @@ img {
     margin-top: 30px;
 }
 
+.policy-text{
+    margin-bottom: 30px;
+    line-height: 1.71;
+}
+
 .check-text{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .check-text span{
